@@ -1,67 +1,37 @@
-# MCCTL - Minecraft Console Terminal
+# MCCTL - Minecraft Console Panel
 
-Panel de monitoreo y administracion para servidores Minecraft.
+App de escritorio liviana para monitorear y administrar servidores Minecraft.
 
-**Terminal** (curses) — App retro con interfaz de consola
-**GUI Desktop** (Tkinter) — App liviana para tener abierta mientras jugas
+## Instalacion
 
-## Caracteristicas
-
-- Monitoreo en vivo de jugadores, TPS, RAM, version
-- Deteccion de actividad sospechosa (/gamemode, /op, exploits, etc.)
-- Alertas por severidad (CRITICA, ALTA, MEDIA, BAJA)
-- Consola RCON integrada
-- Control de servidores locales (start/stop/restart)
-- Whitelist detection
-- Scroll de logs en tiempo real
-- Soporte para servidores locales y remotos
-
-## Instalacion rapida
-
-### Terminal
 ```bash
+# Opcion 1: Descargar release
+# Ve a https://github.com/Adriyache32/MCCTL/releases
+# Descarga MCCTL-v2.0v.tar.gz
+
+tar xzf MCCTL-v2.0v.tar.gz
+cd MCCTL
+python3 gui/mcctl-gui.py
+```
+
+```bash
+# Opcion 2: Clonar
 git clone https://github.com/Adriyache32/MCCTL.git
-cd MCCTL/terminal
-bash install.sh
-mcctl
-```
-
-O directo:
-```bash
-python3 terminal/mcctl.py
-```
-
-### GUI Desktop
-```bash
+cd MCCTL
 python3 gui/mcctl-gui.py
 ```
 
 ## Requisitos
 
-- Linux (solo)
+- Linux
 - Python 3.7+
-- Tkinter (para GUI, viene con Python en la mayoria de distros)
+- Tkinter (viene con Python)
 
 ## RCON
 
-Para control remoto necesitas en `server.properties`:
+En server.properties:
 ```
 enable-rcon=true
 rcon.password=tu_password
 rcon.port=25575
 ```
-
-## Controles (Terminal)
-
-| Tecla | Accion |
-|-------|--------|
-| `↑↓` | Navegar servidores |
-| `a` | Anadir servidor |
-| `d` | Eliminar servidor |
-| `c` | Consola RCON |
-| `r` | Refrescar |
-| `s` | Iniciar servidor (local) |
-| `x` | Detener servidor |
-| `v` | Ver alertas |
-| `?` | Ayuda |
-| `q` | Salir |
