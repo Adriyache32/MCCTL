@@ -1,0 +1,19 @@
+name: 🐛 Bug Report
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes: {label: Versión, description: "Versión de MCCTL", required: true}
+  - type: dropdown
+    id: component
+    attributes:
+      label: Componente
+      options: [RCON, Terminal, GUI, Docker, Config]
+      required: true
+  - type: textarea
+    id: steps
+    attributes: {label: Pasos, required: true}
+  - type: textarea
+    id: logs
+    attributes: {label: Logs, render: shell}

@@ -1,0 +1,16 @@
+name: ✨ Feature Request
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes: {label: Problema, required: true}
+  - type: textarea
+    id: solution
+    attributes: {label: Solución, required: true}
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área
+      options: [RCON, Terminal, GUI, Docker, Monitoring]
+      required: true
